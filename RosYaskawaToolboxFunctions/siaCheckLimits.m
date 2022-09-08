@@ -16,7 +16,7 @@ function y = siaCheckLimits(q, tA, qd, tV)
 %       y   - returns a 1 or 0 boolean to indicate whether numbers are 
 %             within limits
 %
-%   Harrison Helmich, 8 Mar 22
+%   H. Helmich, 8Mar22, USNA
 
 % Updates:
 %       9 Mar 22 - added tolerance for joint angles

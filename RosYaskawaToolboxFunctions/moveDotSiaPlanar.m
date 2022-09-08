@@ -17,11 +17,9 @@ function moveDotSiaPlanar(src,callbackdata,axs,plt,pub,msg,config,ik)
 %       set(fig,'WindowKeyPressFcn',...
 %           @(src,cbd)moveDotKeyPressFCN(src,cbd,axs,plt));
 %
-% Harrison Helmich; 5 April 2022
-%
+%   M. Kutzer & H. Helmich, 5Apr22, USNA
+
 % Updates:
-%
-%
 
 %% Parse useful inputs
 % -> For this example, the source (src) represents the figure triggering or

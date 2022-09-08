@@ -1,14 +1,12 @@
-%%  goToPos_SIA20F(time, q)
-%   Will send the Yaskawa to a single waypoint in a given time. This
-%   function was copied from Levi DeVries's method for the URx.
+function out = goToPos_SIA20F(time, q)
+%   GOTPOS_SIA20F(TIME, Q) will send the Yaskawa to a single waypoint in a
+%   given time. This function was copied from the URx_ROS class.
 %
 %   Inputs:
 %       time -  integer for seconds
-%       q    -  7x1 array     
+%       q    -  7x1 array
 %
-%   Harrison Helmich; 29 Jul 2022
-%
-function out = goToPos_SIA20F(time, q)
+%   L. DeVries & H. Helmich, 29Jul22, USNA
 
 PosPub = rospublisher('/ysk/joint_path_command');
 PosSub = rossubscriber('/ysk/joint_states');

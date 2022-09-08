@@ -16,16 +16,13 @@ function [q, qd] = siaTaskToJoint(config, ik, T_home, X, Xd)
 %       q       - joint angles for desired traj (7xN)
 %       dq      - joint velocities for desired traj (7xN)
 %
-%   Harrison Helmich, 9 Mar 22
+%   H. Helmich, 9Mar22, USNA
 
 %   Updates:
 %       9 Mar 22:   prevented reloading jacobian data within method
 %                   instantiate ik object outside of method
 
 % TODO - Ensure input arrays are correct size
-
-
-
 
 % Build joint arrays
 numWaypoints = size(X,2);
@@ -39,7 +36,7 @@ for i = 1:numWaypoints
     T_des(1:3,4) = X(:,i);
     % using Inverse Kinematics
     [q_sol, q_info] = ik("tool0", T_des, weights, config);
-    
+
     % If a joint angle is found...
     if isequal(q_info.Status, 'success')
         q(:,i) = q_sol(1:7);

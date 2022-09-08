@@ -1,4 +1,8 @@
 function out = goHome_SIA20F(time2Home)
+%   GOHOME_SIA20F(TIME2HOME) moves the Yaskawa SIA20F manipulator to its
+%   home position with in a certain time interval, as desired by the user.
+%
+%   L. DeVries, 1Mar20, USNA
 
 HomePub = rospublisher('/ysk/joint_path_command');
 HomeSub = rossubscriber('/ysk/joint_states');
